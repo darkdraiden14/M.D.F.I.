@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .S{
+            display:none;
+        }
+        .grid-container { 
+            display:grid;   
+            background-color: #2196F3;
+            padding:10px;
+        }
+
+        .grid-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+        }
+        img {
+            border-radius: 25%;
+        }
+        .image{
+            grid-column: 1 / span 2 ;
+            grid-row: 1;
+            width:300px;
+        }
+        .button {
+            background-color: tomato;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 2px;
+            cursor: pointer;
+        }   
+        .details{
+            background-color:black;
+            color:white;
+            grid-column: 3;
+            grid-row: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class='S name1'>
+            <div class='grid-item image'>
+                <img src="https://13.233.144.207/images/Sourav.jpg" alt="Sourav" width="300" height="200">
+            </div>
+            <div class='grid-item  details'>
+                <h1> Sourav Kumar Jha </h1>
+                <p> About Sourav , Will add later...................................................................................
+                ....................................................................................................................
+                ;;;;;;;;;;;;;;;;;;;;;;;;;;</p>
+                <div class="next" align="right" onclick="plusSlides(1)"> <button class="button">Next</button>
+                </div>
+            </div>
+        </div>
+        <div class='S name2'>
+            <div class='grid-item image'>
+                <img src="https://13.233.144.207/images/pp_2.jpeg" alt="name2" width="300" height="300">
+            </div>
+            <div class='grid-item  details'>
+                <h1> </h1>
+                <p> 2nd user
+                </p>
+                <div  align="right" class="next" onclick="plusSlides(1)"> <button class="button">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("S");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slides[slideIndex-1].style.display = "grid";  
+        }
+    </script>
+</body>
+</html>

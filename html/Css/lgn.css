@@ -1,0 +1,55 @@
+html,
+body {
+  height: 100%;
+}
+
+.booth
+{
+      width: 400px;
+      background-color: #ccc;
+      border:10px solid  #ddd;
+      margin: 0 auto;  
+      display: none;
+}
+
+body {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-image: url("https://images.unsplash.com/photo-1542394731-170c9e6d914e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1422&q=80");
+  background-size: cover;
+  background-position: center; 
+}
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  border-width: 0.2vw;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.form-signin input[type="text"]{
+  
+  margin-bottom: -1px;
+  background: transparent;
+  color: black ;
+}
+.form-signin ::placeholder
+{
+  color: black;
+}
